@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+.container {
+  background-color: #e5e5e5;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.head {
+  padding: 2rem 3rem;
+  background-color: #ffffff;
+}
+.card {
+  margin: 3.5rem 5rem;
+  background-color: #ffffff;
+}
+.car {
+  display: flex;
+  padding: 5rem 8rem;
+}
+.car-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 3rem;
+}
+.use {
+  font-size: 1.8rem;
+  letter-spacing: 0.01em;
+  color: #696969;
+}
+.car-img,
+.car-content {
+  width: 50%;
+}
+img.img-car {
+  width: 100%;
+}
+.type {
+  font-size: 2.2rem;
+  letter-spacing: 0.01em;
+  padding-top: 1rem;
+  color: #000000;
+}
+.info,
+.km,
+.loc {
+  display: flex;
+}
+.loc {
+  padding-left: 9rem;
+}
+.info-one {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  letter-spacing: 0.01em;
+
+  color: #696969;
+}
+.info {
+  padding-top: 1rem;
+}
+.pricing {
+  display: flex;
+  align-items: center;
+}
+.price {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: #000000;
+  padding: 3rem 0rem;
+}
+.info-title {
+  font-size: 1.6rem;
+  letter-spacing: 0.01em;
+  color: #696969;
+}
+.info-desc {
+  font-size: 1.6rem;
+  letter-spacing: 0.01em;
+  color: #000000;
+  padding-top: 1rem;
+}
+.sliding {
+  display: flex;
+  padding: 1rem 8rem;
+}
+.slider {
+  display: flex;
+  align-items: center;
+}
+.rarr,
+.cars,
+.larr {
+  padding: 0rem 0.8rem;
+}
+.rarr,
+.larr {
+  cursor: pointer;
+}
+
+.slider-title,
+.truck,
+.state,
+.trans,
+.truck-two {
+  font-size: 1.6rem;
+  letter-spacing: 0.01em;
+  padding-bottom: 1.5rem;
+
+  color: #696969;
+}
+.condition,
+.truck-three,
+.mission,
+.color {
+  font-weight: bold;
+}
+.slider-info {
+  padding: 0rem 2rem;
+  padding-bottom: 5rem;
+}
+.links {
+  float: right;
+  padding: 1rem 8rem;
+  padding-bottom: 9rem;
+}
+.edit-link {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: #ec1d23;
+  background-color: #e5e5e5;
+  text-align: center;
+  padding: 1.5rem 8.5rem;
+  text-decoration: none;
+  border: 1px solid #ec1d23;
+  margin-right: 3rem;
+}
+.save-link {
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: #ffffff;
+  background-color: #ec1d23;
+  text-align: center;
+  padding: 1.5rem 8.5rem;
+  text-decoration: none;
+}

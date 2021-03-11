@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+.container {
+  background-color: #e5e5e5;
+  height: 100vh;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  align-items: center;
+  background-color: #ffffff;
+}
+.head {
+  display: flex;
+  align-items: center;
+}
+.dash {
+  display: flex;
+  align-items: center;
+  padding-left: 6rem;
+}
+.dash-title {
+  font-family: Helvetica;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #3d52a3;
+  margin-left: 1.5rem;
+  border-bottom: 3px solid #3d52a3;
+  padding-bottom: 1rem;
+  margin-top: 1.2rem;
+}
+.dash-right {
+}
+.dash-link {
+  text-decoration: none;
+  font-family: Helvetica;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #353535;
+}
+.card {
+  margin: 4rem;
+  background-color: #ffffff;
+  padding-bottom: 5rem;
+}
+.welcome {
+  padding: 4rem 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.welcome-title {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 2.8rem;
+  line-height: 3.2rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+.listing-link {
+  font-family: Helvetica;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: #ec1d23;
+  padding: 1rem 3rem;
+  text-decoration: none;
+}
+.new-list {
+  padding: 4rem 7rem;
+}
+.list-title {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  letter-spacing: 0.01em;
+  color: #000000;
+  padding-bottom: 1rem;
+}
+.listing-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 0rem;
+}
+.no-list {
+  padding-top: 2rem;
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  letter-spacing: 0.01em;
+  color: #7e7a7a;
+}
+.listin {
+  font-family: Helvetica;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background-color: #3d52a3;
+  padding: 1rem 3rem;
+  margin: 4rem 7rem;
+  text-decoration: none;
+}
+.list-btn {
+  padding-top: 5rem;
+}
+.line {
+  border: 0.3px solid #7e7a7a;
+  width: auto;
+  background-color: #7e7a7a;
+}
+@media (max-width: 480.98px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dash-right {
+    padding-top: 2rem;
+  }
+  html {
+    font-size: 7px;
+  }
+  .welcome {
+    flex-direction: column;
+  }
+  .listing-link {
+    margin-top: 2rem;
+  }
+  .list-btn {
+    text-align: center;
+  }
+  img.gastab-logo {
+    width: 70%;
+  }
+  .welcome-title {
+    font-size: 2.4rem;
+  }
+  .list-title {
+    text-align: center;
+  }
+}
+@media (min-width: 481px) and (max-width: 767.98px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dash-right {
+    padding-top: 2rem;
+  }
+  html {
+    font-size: 8px;
+  }
+  .welcome {
+    flex-direction: column;
+  }
+  .listing-link {
+    margin-top: 2rem;
+  }
+  .list-btn {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+}

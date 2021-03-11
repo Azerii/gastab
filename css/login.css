@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+.container {
+  background-color: #e5e5e5;
+  height: 100vh;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.gastab-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6rem 0rem;
+}
+.gastab-title {
+  padding-top: 3rem;
+}
+.gastab-title-desc {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 3.4rem;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+.gastab-login-form {
+  padding-top: 2rem;
+}
+.email,
+.password {
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.03em;
+  color: #343434;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.input-box {
+  border: 1px solid #c6c6c6;
+  width: 50rem;
+  height: 4.8rem;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  padding: 0rem 1.5rem;
+  letter-spacing: 2px;
+}
+.input-password {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+}
+.login-btn {
+  font-family: Helvetica;
+  font-weight: normal;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  color: #ffffff;
+  background-color: #ec1d23;
+  text-align: center;
+  padding: 1.5rem 22.5rem;
+  text-decoration: none;
+}
+.login-back {
+  margin-top: 4rem;
+}
+.forget-btn {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #ec1d23;
+}
+.password-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: -1rem;
+}
+.show-password {
+  margin-left: -5rem;
+  width: 5%;
+  margin-top: 1.5rem;
+}
+@media (max-width: 480.98px) {
+  html {
+    font-size: 8px;
+  }
+  .input-box {
+    width: 40rem;
+  }
+  .login-btn {
+    padding: 1.5rem 12.5rem;
+  }
+  .gastab-title-desc {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 600px) {
+  html {
+    font-size: 8px;
+  }
+}
