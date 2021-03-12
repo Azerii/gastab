@@ -98,3 +98,9 @@ showBtn.classList.toggle("show-listing")
 })
 
 
+let card=document.querySelector("#mode");
+card.addEventListener("click",()=>{
+  console.log("piss")
+  modalbg.classList.remove("bg-active")
+
+})

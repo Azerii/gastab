@@ -24,6 +24,7 @@ html {
 
   color: #3d52a3;
 }
+
 .header-link {
   padding: 2rem 3rem;
 }
@@ -450,4 +451,8 @@ a {
   background: rgba(0, 0, 0, 0.75);
   font-size: 14px;
   text-align: center;
+}
+.green {
+  background-color: #0bc329;
+  border: 0.3px solid #0bc329;
 }
