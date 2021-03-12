@@ -127,10 +127,11 @@ html {
   padding-top: 5rem;
 }
 .line {
-  border: 0.3px solid #7e7a7a;
+  border: 0.2px solid #7e7a7a;
   width: auto;
   background-color: #7e7a7a;
 }
+
 .list-car2 {
   display: flex;
   justify-content: space-between;
@@ -432,4 +433,14 @@ input {
   .modal {
     height: 30%;
   }
+}
+
+.hide-listing {
+  display: none;
+}
+.show-listing {
+  display: flex;
+}
+a {
+  text-decoration: none;
 }

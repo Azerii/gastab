@@ -5,6 +5,7 @@
 }
 html {
   font-size: 10px;
+  background-color: #e5e5e5;
 }
 .container {
   background-color: #e5e5e5;
@@ -36,8 +37,8 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0rem 3rem;
 }
+
 .circle {
   display: flex;
   align-items: center;
@@ -55,14 +56,23 @@ html {
   position: absolute;
 }
 .one-img {
-  width: 7rem;
-  height: 7rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 7rem;
   background-color: #dadada;
 }
 .sug {
   padding: 2rem 0rem;
 }
+.line {
+  border: 0.3px solid #7e7a7a;
+  /* width: 30px; */
+  background-color: #7e7a7a;
+  padding: 0rem 5rem;
+  align-self: flex-start;
+  margin-top: 2rem;
+}
+
 .step-desc {
   font-size: 1.2rem;
   line-height: 1.4rem;
@@ -128,12 +138,14 @@ html {
   letter-spacing: 0.03em;
   color: #c6c6c6;
   padding: 2rem 0rem;
+  padding-left: 2rem;
 }
 .input-box2 {
   height: 4.8rem;
   width: 43.5rem;
   border: 1px solid #c6c6c6;
   background-color: #ffffff;
+  padding-left: 2rem;
 }
 .truck-model {
   font-size: 1.6rem;
@@ -141,6 +153,9 @@ html {
   letter-spacing: 0.03em;
   color: #343434;
   padding-bottom: 1.5rem;
+}
+.boxing {
+  padding-left: 2rem;
 }
 .toget {
   display: flex;
@@ -236,11 +251,17 @@ html {
   line-height: 2.1rem;
   letter-spacing: 0.03em;
   color: #3d52a3;
+  cursor: none;
 }
 .trans {
   padding: 2rem 6rem;
   border: 1px solid #c6c6c6;
+  cursor: pointer;
 }
+textarea {
+  resize: none;
+}
+
 .row {
   border: 1px solid #3d52a3;
 }
@@ -357,9 +378,6 @@ a {
   }
 }
 @media (max-width: 480.98px) {
-  .on {
-    left: 43%;
-  }
   .transmission {
     flex-direction: column;
   }
@@ -383,21 +401,10 @@ a {
   html {
     font-size: 8px;
   }
-  .on {
-    position: absolute;
-    top: 60%;
-    left: 44%;
-  }
 }
 @media (min-width: 768px) and (max-width: 1023.98px) {
-  .on {
-    left: 46%;
-  }
 }
 @media (min-width: 1024px) and (max-width: 1199.98px) {
-  .on {
-    left: 45%;
-  }
 }
 .drop-zone {
   max-width: 200px;

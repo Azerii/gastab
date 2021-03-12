@@ -39,7 +39,23 @@ detail4.addEventListener("click",()=>{
 })
 
 
-
+let manual=document.querySelector(".man")
+let automatic=document.querySelector(".auto")
+let active=document.getElementById("active")
+let active2=document.getElementById("active2")
+manual.addEventListener("click",()=>{
+  automatic.classList.remove("row")
+  manual.classList.add("row")
+  active2.checked=false
+  active.checked=true
+  
+})
+automatic.addEventListener("click",()=>{
+  manual.classList.remove("row")
+  automatic.classList.add("row")
+  active.checked=false
+  active2.checked=true
+})
 document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
   const dropZoneElement = inputElement.closest(".drop-zone");
 

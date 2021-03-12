@@ -125,7 +125,7 @@ img.img-car {
   padding-bottom: 5rem;
 }
 .links {
-  float: right;
+  text-align: center;
   padding: 1rem 8rem;
   padding-bottom: 9rem;
 }
@@ -148,4 +148,157 @@ img.img-car {
   text-align: center;
   padding: 1.5rem 8.5rem;
   text-decoration: none;
+}
+.slider,
+.slider-info {
+  width: 50%;
+}
+@media (max-width: 480.98px) {
+  html {
+    font-size: 8px;
+  }
+  .car {
+    padding: 5rem 2rem;
+    flex-direction: column;
+  }
+  .slider,
+  .slider-info,
+  .car-content,
+  .car-img {
+    width: 100%;
+  }
+  .sliding {
+    flex-direction: column;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+  .save-link {
+    margin-top: 2rem;
+  }
+  .edit-link {
+    padding: 1.5rem 9rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 767.98px) {
+  .car {
+    padding: 5rem 2rem;
+    flex-direction: column;
+  }
+  .slider,
+  .slider-info,
+  .car-content,
+  .car-img {
+    width: 100%;
+  }
+  .sliding {
+    flex-direction: column;
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+  .save-link {
+    margin-top: 2rem;
+  }
+  .edit-link {
+    padding: 1.5rem 11rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .car {
+    padding: 5rem 1rem;
+  }
+  .car-content {
+    padding: 0rem 2rem;
+  }
+  .info-desc {
+    font-size: 1.2rem;
+  }
+  .price {
+    padding: 1rem 0rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+  html {
+    font-size: 9px;
+  }
+}
+.slider {
+  width: 50%;
+  height: 200px;
+  position: relative;
+  margin: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider .slide {
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: 0.3s left ease-in-out;
+}
+
+.slider .item {
+  margin-right: 10px;
+}
+
+.slider .item:last-child {
+  margin-right: 0;
+}
+
+.ctrl {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.ctrl-btn {
+  padding: 10px 10px;
+  min-width: 30px;
+  background: white;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -27.5px;
+}
+
+.ctrl-btn.pro-prev {
+  left: 0;
+}
+
+.ctrl-btn.pro-next {
+  right: 0;
+}
+@media (max-width: 480.98px) {
+  .slider {
+    width: 90%;
+  }
+  .sliding {
+    display: flex;
+    padding: 1rem 2rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 767.98px) {
+  .slider {
+    width: 90%;
+  }
+  .sliding {
+    display: flex;
+    padding: 1rem 2rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+}
+@media (min-width: 1024px) and (max-width: 1199.98px) {
 }
