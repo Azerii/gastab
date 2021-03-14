@@ -45,14 +45,18 @@ let active=document.getElementById("active")
 let active2=document.getElementById("active2")
 manual.addEventListener("click",()=>{
   automatic.classList.remove("row")
+  automatic.classList.remove("column")
   manual.classList.add("row")
+  manual.classList.add("column")
   active2.checked=false
   active.checked=true
   
 })
 automatic.addEventListener("click",()=>{
   manual.classList.remove("row")
+  manual.classList.remove("column")
   automatic.classList.add("row")
+  automatic.classList.add("column")
   active.checked=false
   active2.checked=true
 })

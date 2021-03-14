@@ -206,7 +206,7 @@ html {
 }
 .on {
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -218,7 +218,7 @@ html {
 }
 .off {
   position: absolute;
-  top: 80%;
+  top: 75%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
@@ -239,7 +239,7 @@ html {
   line-height: 2.1rem;
   letter-spacing: 0.03em;
   color: #c6c6c6;
-  padding: 2rem 0rem;
+  padding: 2rem 2rem;
 }
 
 .transmission {
@@ -253,6 +253,7 @@ html {
   letter-spacing: 0.03em;
   color: #3d52a3;
   cursor: none;
+  padding-left: 2rem;
 }
 .trans {
   padding: 2rem 6rem;
@@ -265,6 +266,9 @@ textarea {
 
 .row {
   border: 1px solid #3d52a3;
+}
+.column {
+  color: #3d52a3;
 }
 .next,
 .next2 {
@@ -385,9 +389,9 @@ a {
   .transmission {
     align-items: center;
   }
-  .truck-model {
+  /* .truck-model {
     text-align: center;
-  }
+  } */
   .trans {
     margin-top: 2rem;
   }
@@ -455,4 +459,72 @@ a {
 .green {
   background-color: #0bc329;
   border: 0.3px solid #0bc329;
+}
+@media (max-width: 480.98px) {
+  .upload {
+    width: 30.5rem;
+  }
+  .files {
+    width: 30.5rem;
+  }
+  .line {
+    padding: 0rem 2rem;
+  }
+  .off {
+    left: 55%;
+    top: 85%;
+    width: 99%;
+  }
+  .steps {
+    margin: 1rem 0.5rem;
+  }
+  .on {
+    top: 68%;
+    left: 50%;
+  }
+  .center {
+    text-align: center;
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .back {
+    margin-right: 0.5rem;
+    padding-bottom: 2rem;
+  }
+  .trans {
+    width: 26rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 767.98px) {
+  .off {
+    top: 90%;
+    left: 45%;
+  }
+  .on {
+    left: 45%;
+  }
+  .transmission {
+    width: 45.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .off {
+    top: 83%;
+    left: 46%;
+  }
+  .on {
+    left: 46%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+  .on {
+    left: 47%;
+  }
+  .off {
+    top: 83%;
+    left: 47%;
+  }
 }
