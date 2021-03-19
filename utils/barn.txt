@@ -1,0 +1,93 @@
+const preventDefaults = (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+};
+
+const highlight = (e, el) => {
+  el.classList.add('highlight');
+}
+
+const unhighlight = (e, el) => {
+  el.classList.remove('highlight');
+}
+
+const handleFiles = (files) => {
+  console.log(files);
+}
+
+const handleDrop = (e) => {
+  let dt = e.dataTransfer;
+  let files = dt.files;
+
+  handleFiles(files);
+}
+
+const dropAreaMain = document.querySelector('.drop-zone.main-image');
+const dropAreaOthers = document.querySelector('.drop-zone.other-images');
+
+['dragenter', 'dragover'].forEach(eventName => {
+  dropAreaMain.addEventListener(eventName, highlight(event, dropAreaMain), false)
+  dropAreaOthers.addEventListener(eventName, highlight(event, dropAreaOthers), false)
+})
+
+setTimeout(() => {
+  ['dragleave', 'drop'].forEach(eventName => {
+    dropAreaMain.addEventListener(eventName, unhighlight(event, dropAreaMain), false);
+    dropAreaOthers.addEventListener(eventName, unhighlight(event, dropAreaOthers), false);
+  });
+});
+
+[dropAreaMain, dropAreaOthers].forEach(el => {
+  el.addEventListener('drop', handleDrop, false);
+})
+
+//update entry
+try {
+    let res;
+    if (id) {
+      res = await axios.put(`${API_HOST}/${collectionType}/${id}`, data, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+    } else {
+      res = await axios.put(`${API_HOST}/${collectionType}`, data, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+    }
+
+    if (res.data.id) {
+      await getCollection(collectionType);
+      return res.data;
+    }
+  } catch (e) {
+    console.log(e);
+  }
+
+  return null;
+
+
+  function getCount(parent, getChildrensChildren) {
+  //count no of items
+  let relevantChildren = 0;
+  let children = parent.childNodes.length;
+  for (let i = 0; i < children; i++) {
+    if (parent.childNodes[i].nodeType != 3) {
+      if (getChildrensChildren)
+        relevantChildren += getCount(parent.childNodes[i], true);
+      relevantChildren++;
+    }
+  }
+  return relevantChildren;
+}
+
+function getTranslateX() {
+  var style = window.getComputedStyle(myElement);
+  var matrix = new WebKitCSSMatrix(style.transform);
+  console.log('translateX: ', matrix.m41);
+}
+
+function hiddenItems() {
+    //get hidden items
+    let items = getCount(imgSlide, false);
+    let visibleItems = slider.offsetWidth / imgSlide.childNodes[position];
+    return items - Math.ceil(visibleItems);
+  }

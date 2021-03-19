@@ -7,7 +7,7 @@ html {
   font-size: 10px;
 }
 .container {
-  background-color: #e5e5e5;
+  background-color: #fbfbfb;
   font-family: Helvetica, Arial, sans-serif;
 }
 .header {
@@ -38,8 +38,8 @@ html {
   padding-bottom: 1rem;
   margin-top: 1.2rem;
 }
-.dash-right {
-}
+/* .dash-right {
+} */
 .dash-link {
   text-decoration: none;
   font-family: Helvetica;
@@ -81,7 +81,7 @@ html {
 }
 .new-list,
 .all-listing {
-  padding: 4rem 7rem;
+  padding: 0rem 7rem;
 }
 .list-title {
   font-family: Helvetica;
@@ -127,14 +127,32 @@ html {
   padding-top: 5rem;
 }
 .line {
-  border: 0.2px solid #7e7a7a;
-  width: auto;
-  background-color: #7e7a7a;
+  border-top: 1px solid #e5e5e5;
 }
 
 .list-car2 {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5rem;
+}
+.list-car {
+  position: relative;
+  cursor: pointer;
+}
+.list-car .link-cover {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+/* .list-car:hover {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+} */
+.list-img img {
+  width: 100%;
 }
 .use2 {
   letter-spacing: 0.01em;
@@ -144,13 +162,19 @@ html {
 .use {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem 0rem;
+}
+.use p {
+  color: #696969;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin: 8px 0;
 }
 .use-option {
   cursor: pointer;
 }
 .type {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
   letter-spacing: 0.01em;
   padding-bottom: 1.5rem;
   color: #000000;
@@ -159,22 +183,30 @@ html {
   display: flex;
   align-items: center;
 }
+.pricing img {
+  height: 2rem;
+}
 .price {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.6rem;
   color: #000000;
 }
 .info {
   display: flex;
   justify-content: space-between;
-  padding-top: 0.8rem;
+  margin-top: 1rem;
 }
 .km,
 .loc {
   display: flex;
+  align-items: center;
+}
+.info img {
+  height: 1rem;
+  margin-right: 4px;
 }
 .info-one {
-  font-size: 0.8rem;
+  font-size: 1rem;
   letter-spacing: 0.01em;
   color: #696969;
 }

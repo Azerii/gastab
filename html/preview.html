@@ -6,93 +6,188 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" href="../css/dashboard.css" type="text/css">
         <link rel="stylesheet" href="../css/preview.css">
     </head>
     <body>
         <main class="container">
-            <header class="head">
-                <img src="../images/gas 1.png" alt="" class="logo">
-            </header>
-            <article class="card">
-                <div class="car">
-                    <div class="car-img">
-                        <img src="../images/Rectangle 66.png" alt="" class="img-car">
+            <header class="header">
+                <div class="head">
+                    <div class="logo">
+                        <img src="../images/gas 1.png" alt="" class="gastab-logo">
                     </div>
-                    <div class="car-content">
-                        <p class="use">USED</p>
-                        <h6 class="type">2016 Ford Mustang V6</h6>
-                        <div class="info">
-                            <div class="km">
-                                <img src="../images/loc.png" alt="" class="km-img">
-                                <p class="info-one">19,800 km</p>
-                            </div>
-                            <div class="loc">
-                                <img src="../images/Group.png" alt="" class="loc-img">
-                                <p class="info-one">Lagos</p>
-                            </div>
+                </div>
+                <div class="dash-right">
+                    <a href="#" class="dash-link">Go the main website</a>
+                    <a href="./login.html" style="display: none;" class="go-to-login"></a>
+                </div>
+            </header>
+            <div class="preview">
+                <div class="card">
+                    <div class="car">
+                        <div class="car-img">
+                            <img src="../images/Rectangle 66.png" alt="" class="img-car mainImage__preview">
                         </div>
-                        <div class="pricing">
-                            <img src="../images/Group 162 1.png" alt="" class="price-img">
-                            <h3 class="price">128,015,000</h3>
-                        </div>
-                        <p class="info-title">Description</p>
-                        <p class="info-desc">LUXURY AUTO SELECTION OFFERS YOU: 2016 Ford Mustang
+                        <div class="car-content">
+                            <p class="use condition__preview">USED</p>
+                            <h6 class="type"><span class="year__preview">2016</span> <span class="model__preview">Ford Mustang V6</span></h6>
+                            <div class="info">
+                                <div class="km">
+                                    <img src="../images/loc.png" alt="" class="km-img">
+                                    <p class="info-one"><span class="mileage__preview"></span>&nbsp;km</p>
+                                </div>
+                                <div class="loc">
+                                    <img src="../images/Group.png" alt="" class="loc-img">
+                                    <p class="info-one location__preview">Lagos</p>
+                                </div>
+                            </div>
+                            <div class="pricing">
+                                <img src="../images/Group 162 1.png" alt="" class="price-img">
+                                <h3 class="price price__preview">128,015,000</h3>
+                            </div>
+                            <p class="info-title">Description</p>
+                            <p class="info-desc description__preview">
+                            LUXURY AUTO SELECTION OFFERS YOU: 2016 Ford Mustang
                             EcoBoost Premium 2dr Convertible Shadow Black Exterior Over 
                             Black Leather Interior Serviced!! Loaded With Options!! Great 
                             Condition!! Included Optional Equipment: Navigation System 
                             ( $795.00 )Heated Seats AC Seats Power Passenger Seat Power. 
                             </p>
+                        </div>
                     </div>
-                </div>
-                <div class="sliding">
-                    <button class="ctrl-btn pro-prev"><img src="../images/larr.svg" alt="" ></button>
-                    <div class="slider" id="slider">
-                        
-                        <div class="slide" id="slide">
-                          <img class="item" src="../images/Rectangle 67.png">
-                          <img class="item" src="../images/Rectangle 68.png">
-                          <img class="item" src="../images/Rectangle 69.png">
-                          <img class="item" src="../images/Rectangle 70.png">
-                          <img class="item" src="../images/Rectangle 71.png">
-                          <img class="item" src="../images/Rectangle 72.png">
-                          <img class="item" src="../images/Rectangle 67.png">
-                          <img class="item" src="../images/Rectangle 68.png">
-                          <img class="item" src="../images/Rectangle 69.png">
-                          <img class="item" src="../images/Rectangle 70.png">
-                          <img class="item" src="../images/Rectangle 71.png">
-                          <img class="item" src="../images/Rectangle 72.png">
-                          <img class="item" src="../images/Rectangle 69.png">
-                          <img class="item" src="../images/Rectangle 70.png">
-                          <img class="item" src="../images/Rectangle 71.png">
-                          <img class="item" src="../images/Rectangle 72.png">
-                          <img class="item" src="../images/Rectangle 67.png">
-                          <img class="item" src="../images/Rectangle 68.png">
-                          <img class="item" src="../images/Rectangle 69.png">
-                          <img class="item" src="../images/Rectangle 70.png">
-                          <img class="item" src="../images/Rectangle 71.png">
-                          <img class="item" src="../images/Rectangle 72.png">
+                    <div class="sliding">
+                        <!-- <button class="ctrl-btn pro-prev"><img src="../images/larr.svg" alt="" ></button>
+                        <div class="slider" id="slider">
+                            
+                            <div class="slide" id="slide">
+                            <img class="item" src="../images/Rectangle 67.png">
+                            <img class="item" src="../images/Rectangle 68.png">
+                            <img class="item" src="../images/Rectangle 69.png">
+                            <img class="item" src="../images/Rectangle 70.png">
+                            <img class="item" src="../images/Rectangle 71.png">
+                            <img class="item" src="../images/Rectangle 72.png">
+                            <img class="item" src="../images/Rectangle 67.png">
+                            <img class="item" src="../images/Rectangle 68.png">
+                            <img class="item" src="../images/Rectangle 69.png">
+                            <img class="item" src="../images/Rectangle 70.png">
+                            <img class="item" src="../images/Rectangle 71.png">
+                            <img class="item" src="../images/Rectangle 72.png">
+                            <img class="item" src="../images/Rectangle 69.png">
+                            <img class="item" src="../images/Rectangle 70.png">
+                            <img class="item" src="../images/Rectangle 71.png">
+                            <img class="item" src="../images/Rectangle 72.png">
+                            <img class="item" src="../images/Rectangle 67.png">
+                            <img class="item" src="../images/Rectangle 68.png">
+                            <img class="item" src="../images/Rectangle 69.png">
+                            <img class="item" src="../images/Rectangle 70.png">
+                            <img class="item" src="../images/Rectangle 71.png">
+                            <img class="item" src="../images/Rectangle 72.png">
+                            </div>
+                            
                         </div>
                         
-                      </div>
-                     
-                        <button class="ctrl-btn pro-next"><img src="../images/rarr.png" alt=""></button>
-                   
-                    <div class="slider-info">
-                        <p class="slider-title">Basics</p>
-                        <p class="truck">Truck condition:<span class="condition">Nigeria used</span>
-                        </p>
-                        <p class="state">State of the truck:<span class="truck-three"> Unpainted, Need body repair</span>
-                        </p>
-                        <p class="trans">Transmission: <span class="mission">Automatic </span></p>
-                        <p class="truck-two">Truck color:<span class="color"> Red</span></p>
+                        <button class="ctrl-btn pro-next"><img src="../images/rarr.png" alt=""></button> -->
+                        <div class="links">
+                            <a href="./index.html" style="display: none;" class="go-to-next"></a>
+                            <a href="./edit_detail_step_1.html" class="edit-link" >Edit</a>
+                            <button href="#" class="save-link" onclick="handleDelete()">Delete</button>
+                        </div>
+                        <div class="slider-info">
+                            <p class="slider-title">Basics</p>
+                            <p class="truck" style="flex-direction: row;">Truck condition:&nbsp;<span class="condition condition2__preview">Nigeria used</span>
+                            </p>
+                            <p class="state">State of the truck:&nbsp;<span class="truck-three currentState__preview"> Unpainted, Need body repair</span>
+                            </p>
+                            <p class="trans" style="padding: 0;padding-bottom: 1.5rem; border: none;">Transmission:&nbsp;<span class="mission transmission__preview">Automatic </span></p>
+                            <p class="truck-two">Truck color:&nbsp;<span class="color color__preview"> Red</span></p>
+                        </div>
                     </div>
+                    <!-- <div class="links">
+                        <a href="./add_detail_step_1.html" class="edit-link">Edit</a>
+                        <a href="#" class="save-link">Save</a>
+                    </div> -->
                 </div>
-                <div class="links">
-                    <a href="adddetail.html" class="edit-link">Edit</a>
-                    <a href="#" class="save-link">Save</a>
-                </div>
-            </article>
+            </div>
         </main>
-        <script src="../js/slide.js" async defer></script>
+        <!-- <script src="../js/slide.js" async defer></script> -->
+        <script src="../utils/api/deleteEntry.js" text="text/javascript"></script>
+        <script>
+            if (!localStorage.getItem("gastab_admin:root")) {
+                document.querySelector('.go-to-login').click();
+            }
+            // preview details
+            let vehicles;
+            let previewItemId;
+            let previewItemId__num;
+            let index;
+            let previewItem;
+
+            if (localStorage.getItem("vehiclesList") && localStorage.getItem("previewItemId")) {
+                vehicles = JSON.parse(localStorage.getItem("vehiclesList"));
+                previewItemId = localStorage.getItem("previewItemId");
+                previewItemId__num = Number(previewItemId);
+
+                for (let i = 0; i < vehicles.length; i++) {
+                    if (vehicles[i].id === previewItemId__num) {
+                        previewItem = vehicles[i];
+                        break;
+                    }
+                }
+            }
+
+            const showPreview = () => {
+
+                const API_HOST = "http://localhost:1337"
+
+                const formatNumber = (num) => {
+                    const formatter = new Intl.NumberFormat()
+                    const toNum = Number(num);
+
+                    return formatter.format(toNum);
+                };
+
+                // preview elements
+                const mainImage__preview = document.querySelector('.mainImage__preview');
+                const condition__preview = document.querySelector('.condition__preview');
+                const year__preview = document.querySelector('.year__preview');
+                const model__preview = document.querySelector('.model__preview');
+                const mileage__preview = document.querySelector('.mileage__preview');
+                const location__preview = document.querySelector('.location__preview');
+                const price__preview = document.querySelector('.price__preview');
+                const decsription__preview = document.querySelector('.description__preview');
+                const condition2__preview = document.querySelector('.condition2__preview');
+                const currentState__preview = document.querySelector('.currentState__preview');
+                const transmission__preview = document.querySelector('.transmission__preview');
+                const color__preview = document.querySelector('.color__preview');
+
+                // set preview image
+                if (previewItem && previewItem.mainImage) {
+                    const previewUrl = previewItem.mainImage.url;
+                    mainImage__preview.src = `${API_HOST}${previewUrl}`;
+                }
+
+                // set preview details
+                if (previewItem) {
+                    condition__preview.innerText = previewItem.condition;
+                    year__preview.innerText = previewItem.year;
+                    model__preview.innerText = previewItem.model;
+                    mileage__preview.innerText = formatNumber(previewItem.mileage);
+                    location__preview.innerText = previewItem.location;
+                    price__preview.innerText = formatNumber(previewItem.price);
+                    decsription__preview.innerText = previewItem.description;
+                    condition2__preview.innerText = previewItem.condition;
+                    currentState__preview.innerText = previewItem.currentState
+                    transmission__preview.innerText = previewItem.transmission;
+                    color__preview.innerText = previewItem.color;
+                }
+            };
+
+            showPreview();
+
+            const handleDelete = () => {
+                deleteEntry("vehicles", previewItemId__num);
+            }
+        </script>
     </body>
 </html>

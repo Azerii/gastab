@@ -7,8 +7,8 @@ html {
   font-size: 10px;
 }
 .container {
-  background-color: #e5e5e5;
-  height: 100vh;
+  background-color: #ffffff;
+  min-height: 100vh;
   font-family: Helvetica, Arial, sans-serif;
 }
 .gastab-login {
@@ -28,11 +28,16 @@ html {
   text-align: center;
   letter-spacing: 0.01em;
   color: #000000;
+  margin-bottom: 4rem;
 }
 .gastab-login-form {
   padding-top: 2rem;
 }
-.email,
+
+.gastab-login-form > div {
+  margin-bottom: 4rem;
+}
+.identifier,
 .password {
   font-weight: normal;
   font-size: 1.6rem;
@@ -50,10 +55,10 @@ html {
   padding: 0rem 1.5rem;
   letter-spacing: 2px;
 }
-.input-password {
+/* .input-password {
   padding-top: 2rem;
   padding-bottom: 6rem;
-}
+} */
 .login-btn {
   font-family: Helvetica;
   font-weight: normal;
@@ -64,6 +69,7 @@ html {
   text-align: center;
   padding: 1.5rem 22.5rem;
   text-decoration: none;
+  margin-top: 2rem;
 }
 .login-back {
   margin-top: 4rem;
@@ -83,8 +89,9 @@ html {
 }
 .show-password {
   margin-left: -5rem;
-  width: 5%;
+  width: 2rem;
   margin-top: 1.5rem;
+  cursor: pointer;
 }
 @media (max-width: 480.98px) {
   html {

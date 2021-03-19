@@ -1,11 +1,4 @@
-function myFunction() {
-  let x = document.getElementById("myInput");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
+
  let step1=document.querySelector(".first");
  let step2=document.querySelector(".second");
  let step3=document.querySelector(".third")

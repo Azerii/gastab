@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,13 +9,41 @@ html {
 .container {
   background-color: #e5e5e5;
   font-family: Helvetica, Arial, sans-serif;
+  height: 100vh;
+  overflow: auto;
 }
 .head {
   padding: 2rem 3rem;
   background-color: #ffffff;
+} */
+
+.preview-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+  overflow: auto;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+  padding: 2rem 0;
+  transition: opacity 100ms ease-in;
 }
+
+.preview {
+  margin: 3rem 0;
+}
+
+.preview-modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .card {
-  margin: 3.5rem 5rem;
+  width: 90%;
+  margin: auto;
   background-color: #ffffff;
 }
 .car {
@@ -25,13 +53,13 @@ html {
 .car-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 0rem 3rem;
+  padding-left: 5rem;
 }
 .use {
   font-size: 1.8rem;
   letter-spacing: 0.01em;
   color: #696969;
+  text-transform: uppercase;
 }
 .car-img,
 .car-content {
@@ -50,6 +78,7 @@ img.img-car {
 .km,
 .loc {
   display: flex;
+  justify-content: unset;
 }
 .loc {
   padding-left: 9rem;
@@ -85,14 +114,6 @@ img.img-car {
   color: #000000;
   padding-top: 1rem;
 }
-.sliding {
-  display: flex;
-  padding: 1rem 8rem;
-}
-.slider {
-  display: flex;
-  align-items: center;
-}
 .rarr,
 .cars,
 .larr {
@@ -120,20 +141,45 @@ img.img-car {
 .color {
   font-weight: bold;
 }
+
+.img-slider {
+  width: 50%;
+  display: flex;
+}
+
+.sliding {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 8rem;
+  background-color: #ffffff;
+}
+.slider {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
 .slider-info {
-  padding: 0rem 2rem;
+  width: 50%;
+  padding-left: 5rem;
   padding-bottom: 5rem;
 }
 .links {
-  text-align: center;
+  display: flex;
+  justify-content: flex-end;
   padding: 1rem 8rem;
-  padding-bottom: 9rem;
+  background-color: #ffffff;
 }
 .edit-link {
   font-size: 1.8rem;
   line-height: 2.1rem;
   color: #ec1d23;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
   text-align: center;
   padding: 1.5rem 8.5rem;
   text-decoration: none;
@@ -149,10 +195,54 @@ img.img-car {
   padding: 1.5rem 8.5rem;
   text-decoration: none;
 }
-.slider,
-.slider-info {
-  width: 50%;
+
+.slider::-webkit-scrollbar {
+  display: none;
 }
+
+.slider .slide {
+  height: 100%;
+  display: flex;
+  transition: 0.3s transform ease-in-out;
+}
+
+.slider .item {
+  padding: 10px;
+  position: relative;
+}
+
+.slider .item:last-child {
+  margin-right: 0;
+}
+
+.ctrl {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.ctrl-btn {
+  padding: 10px 10px;
+  min-width: 30px;
+  background: #ffff;
+  border: none;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+
+  margin-top: -27.5px;
+}
+
+.ctrl-btn.pro-prev {
+  left: 0;
+  margin-top: 0.5rem;
+}
+
+.ctrl-btn.pro-next {
+  right: 0;
+  margin-top: 1rem;
+}
+
 @media (max-width: 480.98px) {
   html {
     font-size: 8px;
@@ -225,62 +315,7 @@ img.img-car {
     font-size: 9px;
   }
 }
-.slider {
-  width: 50%;
-  height: 200px;
-  position: relative;
-  margin: auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
 
-.slider::-webkit-scrollbar {
-  display: none;
-}
-
-.slider .slide {
-  display: flex;
-  position: absolute;
-  left: 0;
-  transition: 0.3s left ease-in-out;
-}
-
-.slider .item {
-  margin-right: 10px;
-  position: relative;
-}
-
-.slider .item:last-child {
-  margin-right: 0;
-}
-
-.ctrl {
-  text-align: center;
-  margin-top: 5px;
-}
-
-.ctrl-btn {
-  padding: 10px 10px;
-  min-width: 30px;
-  background: #ffff;
-  border: none;
-  font-weight: 600;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-
-  margin-top: -27.5px;
-}
-
-.ctrl-btn.pro-prev {
-  left: 0;
-  margin-top: 0.5rem;
-}
-
-.ctrl-btn.pro-next {
-  right: 0;
-  margin-top: 1rem;
-}
 @media (max-width: 480.98px) {
   .slider {
     width: 90%;

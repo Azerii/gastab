@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>GASTAB || DETAIL</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+        <link rel="stylesheet" href="../css/index.css" type="text/css" >
+        <link rel="stylesheet" href="../css/dashboard.css">
+        <link rel="stylesheet" href="../css/adddetail.css">
+        <link rel="stylesheet" href="../css/preview.css">
+    </head>
+    <body>
+        <main class="container">
+            <header class="header">
+                <div class="head">
+                    <div class="logo">
+                        <img src="../images/gas 1.png" alt="" class="gastab-logo">
+                    </div>
+                </div>
+                <div class="dash-right"><a href="#" class="dash-link">Go the main website</a></div>
+            </header>
+            <section class="steps first">
+              <div class="header-link come">
+                  <a href="./index.html" class="back-link">&#8592; &nbsp; &nbsp; Go back to the dashboard</a>
+                  <a href="./login.html" style="display: none;" class="go-to-login"></a>
+              </div>
+              <div class="stepping">
+                  <div class="step-one">
+                      <div class="circle tick2">
+                          <img src="../images/mark.svg" alt="">
+                      </div>
+                      <div class="sug">
+                          <p class="step-desc">Step 01</p>
+                      </div>
+                      <div>
+                          <h2 class="step-title">Main Details</h2>
+                      </div>
+                  </div>
+                  <div class="line green"></div>
+                  <div class="step-one">
+                      <div class="circle">
+                          <img src="../images/mark.svg" alt="">
+                      </div>
+                      <div class="sug">
+                          <p class="step-desc">Step 02</p>
+                      </div>
+                      <div>
+                          <h2 class="step-title">Other Details</h2>
+                      </div>
+                  </div>
+                  <div class="line green"></div>
+                  <div class="step-one">
+                      <div class="circle">
+                          <p class="one white">3</p>
+                          <div class="one-img red"></div>
+                      </div>
+                      <div class="sug">
+                          <p class="step-desc">Step 01</p>
+                      </div>
+                      <div>
+                          <h2 class="step-title">Images & Description</h2>
+                      </div>
+                  </div>
+              </div>
+              <form class="step-detail" onsubmit="handleSubmit(event, `imagesAndDesc`)">
+                  <h2 class="step-detail-title">Images & Description</h2>
+                  
+                  <div class="truck">
+                      <label class="truck-model" for="truck-model">Upload main image of Truck</label>
+                      <div class="upload">
+                          <img class="img=upload" src="../images/Group.svg" alt="">
+                          <div class="drop-zone main-image">
+                              <span id="upload-main" class="drop-zone__prompt upload-desc"><span class="redd">browse</span> to choose a file</span>
+                              <input type="file" name="mainImage" class="drop-zone__input" accept="image/*" onchange="loadFile(event)">
+                          </div>
+                          <p class="upload-size">max. File size: 5 MB</p>
+                          <div class="files main-image">
+                            <!-- <div class="file1">
+                                <p class="file-title">IMG-40677.JPG</p>
+                                <div class="file-size">
+                                    <p class="file-desc">2.0mb</p>
+                                    <img src="../images/cancel.svg" alt="" class="cancel-file">
+                                </div>
+                            </div> -->
+                        </div>
+                      </div>
+                  </div>
+                  <div class="truck">
+                      <label class="truck-model"  for="truck-model">Upload other images of Truck</label>
+                      <div class="upload">
+                          <img class="img=upload" src="../images/Group.svg" alt="">
+                          <div class="drop-zone other-images">
+                              <span id="upload-others" class="drop-zone__prompt upload-desc"><span class="redd">browse</span> to choose files</span>
+                              <input type="file" name="otherImages" class="drop-zone__input" accept="image/*" multiple onchange="loadFile(event)">
+                          </div>
+                          <p class="upload-size">max. File size: 5 MB</p>
+                          <div class="files other-images">
+                            <!-- <div class="file1">
+                                <p class="file-title">IMG-40677.JPG</p>
+                                <div class="file-size">
+                                    <p class="file-desc">2.0mb</p>
+                                    <img src="../images/cancel.svg" alt="" class="cancel-file">
+                                </div>
+                            </div>-->
+                        </div>
+                      </div>
+                  </div>
+                  <div class="truck">
+                      <label class="truck-model"  for="description">Truck Description</label>
+                      <textarea id="description" name="description" type="text"  class="input-box boxing" required></textarea>
+                  </div>
+                  <div class="nav">
+                      <!-- <a href="./preview.html" style="display: none;" class="go-to-next"></a> -->
+                      <a href="./add_detail_step_2.html" class="back tickshoe">Back</a>
+                      <button class="next2 preview">Preview</button>
+                  </div>
+              </form>
+          </section>
+
+          <div class="preview-modal">
+            <div class="card">
+              <div class="car">
+                  <div class="car-img">
+                      <img src="../images/Rectangle 66.png" alt="" class="img-car mainImage__preview">
+                  </div>
+                  <div class="car-content">
+                      <p class="use condition__preview">USED</p>
+                      <h6 class="type"><span class="year__preview">2016</span> <span class="model__preview">Ford Mustang V6</span></h6>
+                      <div class="info">
+                          <div class="km">
+                              <img src="../images/loc.png" alt="" class="km-img">
+                              <p class="info-one"><span class="mileage__preview"></span>&nbsp;km</p>
+                          </div>
+                          <div class="loc">
+                              <img src="../images/Group.png" alt="" class="loc-img">
+                              <p class="info-one location__preview">Lagos</p>
+                          </div>
+                      </div>
+                      <div class="pricing">
+                          <img src="../images/Group 162 1.png" alt="" class="price-img">
+                          <h3 class="price price__preview">128,015,000</h3>
+                      </div>
+                      <p class="info-title">Description</p>
+                      <p class="info-desc description__preview">
+                        LUXURY AUTO SELECTION OFFERS YOU: 2016 Ford Mustang
+                        EcoBoost Premium 2dr Convertible Shadow Black Exterior Over 
+                        Black Leather Interior Serviced!! Loaded With Options!! Great 
+                        Condition!! Included Optional Equipment: Navigation System 
+                        ( $795.00 )Heated Seats AC Seats Power Passenger Seat Power. 
+                      </p>
+                  </div>
+              </div>
+              <div class="sliding">
+                  <div class="img-slider">
+                    <button class="ctrl-btn pro-prev"><img src="../images/larr.svg" alt="" ></button>
+                    <div class="slider" id="slider">
+                      <div class="slide" id="slide"></div>
+                    </div>
+                    <button class="ctrl-btn pro-next"><img src="../images/rarr.png" alt=""></button>
+                  </div>
+                  <div class="slider-info">
+                      <p class="slider-title">Basics</p>
+                      <p class="truck" style="flex-direction: row;">Truck condition:&nbsp;<span class="condition condition2__preview">Nigeria used</span>
+                      </p>
+                      <p class="state">State of the truck:&nbsp;<span class="truck-three currentState__preview"> Unpainted, Need body repair</span>
+                      </p>
+                      <p class="trans" style="padding: 0;padding-bottom: 1.5rem; border: none;">Transmission:&nbsp;<span class="mission transmission__preview">Automatic </span></p>
+                      <p class="truck-two">Truck color:&nbsp;<span class="color color__preview"> Red</span></p>
+                  </div>
+              </div>
+              <div class="links">
+                  <button href="./add_detail_step_1.html" class="edit-link" onclick="handleEditCLick()">Edit</button>
+                  <button href="#" class="save-link" onclick="handleSave()">Save</button>
+              </div>
+            </div>
+          </div>
+        </main>
+        
+        <script src="../js/slide.js" type="text/javascript" ></script>
+        <script src="../utils/api/addEntry.js" type="text/javascript"></script>
+        <script src="../js/slide.js"></script>
+        <script>
+          if (!localStorage.getItem("gastab_admin:root")) {
+              document.querySelector('.go-to-login').click();
+          }
+          
+          const uploadMain = document.querySelector('#upload-main');
+          const uploadOthers = document.querySelector('#upload-others');
+          const uploadMain_input = document.querySelector('input[name="mainImage"]');
+          const uploadOthers_input = document.querySelector('input[name="otherImages"]');
+          const dropZonePrompt_main = document.querySelector('.drop-zone.main-image .drop-zone__prompt');
+          const dropZonePrompt_others = document.querySelector('.drop-zone.other-images .drop-zone__prompt');
+          const filesWrapper_main = document.querySelector('.files.main-image');
+          const filesWrapper_others = document.querySelector('.files.other-images');
+          const previewModal = document.querySelector('.preview-modal')
+          const mainImageArr = [];
+          const otherImagesArr = [];
+          let description;
+
+
+          uploadMain.addEventListener('click', () => uploadMain_input.click());
+          uploadOthers.addEventListener('click', () => uploadOthers_input.click());
+
+          const formatNumber = (num) => {
+            const formatter = new Intl.NumberFormat()
+            const toNum = Number(num);
+
+            return formatter.format(toNum);
+          };
+
+
+          function formatBytes(bytes, decimals = 1) {
+            if (bytes === 0) return '0 Bytes';
+
+            const k = 1024;
+            const dm = decimals < 0 ? 0 : decimals;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+          }
+
+          function updateFileDisplay(index, initiator){
+            if (initiator === 'mainImage') {
+                mainImageArr.splice(index, 1);
+                showMainFile();
+            } else {
+                otherImagesArr.splice(index, 1);
+                showOtherFiles();
+            }
+          }
+
+
+          const showMainFile = () => {
+            const f = mainImageArr[0];
+
+            if (f) {
+              const fileDisplay = `
+                <div class="file1">
+                    <p class="file-title">${f.name}</p>
+                    <div class="file-size">
+                        <p class="file-desc">${formatBytes(f.size)}</p>
+                        <img src="../images/cancel.svg" alt="" class="cancel-file" onclick="updateFileDisplay(0, 'mainImage')">
+                    </div>
+                </div>
+              `;
+              filesWrapper_main.innerHTML = fileDisplay;
+            } else {
+              filesWrapper_main.innerHTML = null;
+            }
+          };
+
+          const showOtherFiles = () => {
+            const files = otherImagesArr;
+
+            if (files.length) {
+
+              const fileDisplay = files.map((file, index) => `
+                <div class="file1">
+                    <p class="file-title">${file.name}</p>
+                    <div class="file-size">
+                        <p class="file-desc">${formatBytes(file.size)}</p>
+                        <img src="../images/cancel.svg" alt="" class="cancel-file" onclick="updateFileDisplay(${index}, null)">
+                    </div>
+                </div>
+              `);
+
+              filesWrapper_others.innerHTML = fileDisplay.join("");
+            } else {
+              filesWrapper_others.innerHTML = null;
+            }
+          };
+
+          // const removeFile = () => {
+
+          // }
+
+          const loadFile = (event) => {
+
+            const files = event.target.files; // FileList object
+            const inputName = event.target.name;
+
+            try {
+              for (var i = 0; i < files.length; i++) {
+                let f = files[i];
+
+                if (Math.ceil((f.size/1024)/1024) > 5) {
+                    throw new Error("Maximum video upload size exceeded!");
+                } else if (inputName === "mainImage") {
+                    mainImageArr[0] = f;
+                    showMainFile();
+                } else {
+                    otherImagesArr.push(f);
+                    showOtherFiles();
+                }
+              }
+            } catch(e) {
+                alert(e.message);
+            }
+          };
+
+          const showPreview = () => {
+            // preview details
+            let mainDetails;
+            let otherDetails;
+
+            if (localStorage.getItem("mainDetails") && localStorage.getItem("otherDetails")) {
+              mainDetails = JSON.parse(localStorage.getItem("mainDetails"));
+              otherDetails = JSON.parse(localStorage.getItem("otherDetails"));
+            }
+
+            // preview elements
+            const mainImage__preview = document.querySelector('.mainImage__preview');
+            const condition__preview = document.querySelector('.condition__preview');
+            const year__preview = document.querySelector('.year__preview');
+            const model__preview = document.querySelector('.model__preview');
+            const mileage__preview = document.querySelector('.mileage__preview');
+            const location__preview = document.querySelector('.location__preview');
+            const price__preview = document.querySelector('.price__preview');
+            const decsription__preview = document.querySelector('.description__preview');
+            const condition2__preview = document.querySelector('.condition2__preview');
+            const currentState__preview = document.querySelector('.currentState__preview');
+            const transmission__preview = document.querySelector('.transmission__preview');
+            const color__preview = document.querySelector('.color__preview');
+
+            // set preview image
+            if (mainImageArr[0]) {
+              const previewImg = mainImageArr[0]
+              mainImage__preview.src = URL.createObjectURL(previewImg);
+            }
+
+            if (otherImagesArr.length) {
+              const otherImages = otherImagesArr.map(img => (
+                `
+                  <img class="item" src=${URL.createObjectURL(img)}>
+                `
+              ));
+
+              document.querySelector('.slide').innerHTML = otherImages.join("");
+            } else {
+              document.querySelector('.img-slider').innerHTML = `<p>-- -- --</p>`;
+            }
+
+            // set preview details
+            if (mainDetails && otherDetails) {
+              condition__preview.innerText = otherDetails.condition;
+              year__preview.innerText = mainDetails.year;
+              model__preview.innerText = mainDetails.model;
+              mileage__preview.innerText = formatNumber(mainDetails.mileage);
+              location__preview.innerText = mainDetails.location;
+              price__preview.innerText = formatNumber(mainDetails.price);
+              decsription__preview.innerText = description;
+              condition2__preview.innerText = otherDetails.condition;
+              currentState__preview.innerText = otherDetails.currentState
+              transmission__preview.innerText = otherDetails.transmission;
+              color__preview.innerText = otherDetails.color;
+            }
+
+            productScroll();
+
+            previewModal.classList.add('open');
+          };
+
+          const handleSubmit = (e, tag) => {
+            e.preventDefault();
+
+            description = document.querySelector('#description').value;
+            
+            if(mainImageArr[0]) {
+              showPreview();
+            } else {
+              alert("You must upload at least the main image!")
+            }
+          };
+
+          const handleEditCLick = () => {
+            previewModal.classList.remove('open');
+          };
+
+          const handleSave = () => {
+            const uploads = new FormData()
+            let mainDetails = {};
+            let otherDetails = {};
+            let data = {}
+
+            if (localStorage.getItem("mainDetails") && localStorage.getItem("otherDetails")) {
+              mainDetails = JSON.parse(localStorage.getItem("mainDetails"));
+              otherDetails = JSON.parse(localStorage.getItem("otherDetails"));
+
+              data = {
+                ...mainDetails,
+                ...otherDetails
+              }
+            }
+
+            data.description = description;
+
+            if (mainImageArr[0]) {
+              const file = mainImageArr[0];
+              uploads.append(`files.mainImage`, file, file.name);
+            }
+
+            if (otherImagesArr.length) {
+              for (let i = 0; i < otherImagesArr.length; i++) {
+                let file = otherImagesArr[i];
+                uploads.append('files.moreImages', file, file.name);
+              }
+            }
+
+            uploads.append('data', JSON.stringify(data));
+
+            addEntry('vehicles', uploads);
+          };
+        </script>
+    </body>
+</html>
