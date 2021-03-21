@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="dash-right">
-                    <a href="#" class="dash-link">Go the main website</a>
+                    <a href="#" class="dash-link">Go to the main website</a>
                     <a href="./login.html" style="display: none;" class="go-to-login"></a>
                 </div>
             </header>
@@ -91,7 +91,7 @@
                         <div class="links">
                             <a href="./index.html" style="display: none;" class="go-to-next"></a>
                             <a href="./edit_detail_step_1.html" class="edit-link" >Edit</a>
-                            <button href="#" class="save-link" onclick="handleDelete()">Delete</button>
+                            <button href="#" class="save-link" onclick="openConfirmDelete()">Delete</button>
                         </div>
                         <div class="slider-info">
                             <p class="slider-title">Basics</p>
@@ -107,6 +107,22 @@
                         <a href="./add_detail_step_1.html" class="edit-link">Edit</a>
                         <a href="#" class="save-link">Save</a>
                     </div> -->
+                </div>
+            </div>
+            <div class="modal confirmDelete">
+                <div class="modal-inner">
+                    <h2 class="modal-title">
+                        Are you sure you want to
+                        <br>
+                        delete this listing?
+                    </h2>
+                    <p class="modal-desc">
+                        Deleting this listing would remove its activity and history.
+                    </p>
+                    <div class="modal-btns">
+                        <button class="cancel-link" onclick="closeConfirmDelete()">Cancel</button>
+                        <button class="delete-link" onclick="handleDelete()">Delete</button>
+                    </div>
                 </div>
             </div>
         </main>
@@ -126,19 +142,29 @@
             if (localStorage.getItem("vehiclesList") && localStorage.getItem("previewItemId")) {
                 vehicles = JSON.parse(localStorage.getItem("vehiclesList"));
                 previewItemId = localStorage.getItem("previewItemId");
-                previewItemId__num = Number(previewItemId);
+                if (previewItemId__num != 0) {
+                    index = previewItemId__num - 1;
+                }
 
                 for (let i = 0; i < vehicles.length; i++) {
-                    if (vehicles[i].id === previewItemId__num) {
+                    if (vehicles[i].id.toString() === previewItemId.toString()) {
                         previewItem = vehicles[i];
                         break;
                     }
                 }
             }
 
+            const closeConfirmDelete = () => {
+                document.querySelector('.confirmDelete').classList.remove('open');
+            };
+
+            const openConfirmDelete = () => {
+                document.querySelector('.confirmDelete').classList.add('open');
+            };
+
             const showPreview = () => {
 
-                const API_HOST = "http://localhost:1337"
+                const API_HOST = 'https://gastab-server.herokuapp.com';
 
                 const formatNumber = (num) => {
                     const formatter = new Intl.NumberFormat()
@@ -186,7 +212,7 @@
             showPreview();
 
             const handleDelete = () => {
-                deleteEntry("vehicles", previewItemId__num);
+                deleteEntry("vehicles", previewItemId);
             }
         </script>
     </body>

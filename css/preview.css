@@ -172,7 +172,6 @@ img.img-car {
 .links {
   display: flex;
   justify-content: flex-end;
-  padding: 1rem 8rem;
   background-color: #ffffff;
 }
 .edit-link {
@@ -258,10 +257,6 @@ img.img-car {
     width: 100%;
   }
   .sliding {
-    flex-direction: column;
-  }
-  .links {
-    display: flex;
     flex-direction: column;
   }
   .save-link {

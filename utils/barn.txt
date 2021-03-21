@@ -91,3 +91,45 @@ function hiddenItems() {
     let visibleItems = slider.offsetWidth / imgSlide.childNodes[position];
     return items - Math.ceil(visibleItems);
   }
+
+
+  <div class="list-car four">
+                      <div class="list-img">
+                          <img src="../images/Rectangle 61.png" alt="" class="img-list">
+                      </div>
+                      <div class="car-content">
+                          <div class="use">
+                              <p class="use">USED</p>
+                              <img src="../images/Group 170.png" alt="" class="use-option using4">
+                          </div>
+                          <h6 class="type">2016 Ford Mustang V6</h6>
+                          <div class="delete2 edit4">
+                              <a href="../html/adddetail.html" class="edit">
+                                  <img src="../images/edit (1) 1.png" alt="" class="edit-img">
+                                  <p class="edit-desc">Edit listing</p>
+                              </a>
+                              <div class="delete">
+                                  <img src="../images/Group 20.png" alt="" class="delete-img">
+                                  <p class="delete-desc btn-m4">Delete Listing</p>
+                              </div>
+                          </div>
+                          
+                          <div class="pricing">
+                              <img src="../images/Group 162 1.png" alt="" class="price-img">
+                              <h3 class="price">128,015,000</h3>
+                          </div>
+                          <div class="info">
+                              <div class="km">
+                                  <img src="../images/loc.png" alt="" class="km-img">
+                                  <p class="info-one">19,800 km</p>
+                              </div>
+                              <div class="loc">
+                                  <img src="../images/Group.png" alt="" class="loc-img">
+                                  <p class="info-one">Lagos</p>
+                              </div>
+                              <div class="more-detail">
+                                  <p class="see-more">See more details</p>
+                              </div>
+                          </div>
+                      </div>
+                    </div>

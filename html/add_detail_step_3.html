@@ -19,7 +19,7 @@
                         <img src="../images/gas 1.png" alt="" class="gastab-logo">
                     </div>
                 </div>
-                <div class="dash-right"><a href="#" class="dash-link">Go the main website</a></div>
+                <div class="dash-right"><a href="#" class="dash-link">Go to the main website</a></div>
             </header>
             <section class="steps first">
               <div class="header-link come">
@@ -171,6 +171,7 @@
                   </div>
               </div>
               <div class="links">
+                  <a href="./index.html" style="display: none;" class="go-to-next"></a>
                   <button href="./add_detail_step_1.html" class="edit-link" onclick="handleEditCLick()">Edit</button>
                   <button href="#" class="save-link" onclick="handleSave()">Save</button>
               </div>
@@ -340,6 +341,7 @@
               ));
 
               document.querySelector('.slide').innerHTML = otherImages.join("");
+              productScroll();
             } else {
               document.querySelector('.img-slider').innerHTML = `<p>-- -- --</p>`;
             }
@@ -358,8 +360,6 @@
               transmission__preview.innerText = otherDetails.transmission;
               color__preview.innerText = otherDetails.color;
             }
-
-            productScroll();
 
             previewModal.classList.add('open');
           };

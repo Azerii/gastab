@@ -6,7 +6,6 @@
         <title>GASTAB || DASHBOARD</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
-        <!-- <link rel="stylesheet" href="../css/listing.css"> -->
         <link rel="stylesheet" href="../css/dashboard.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
@@ -25,7 +24,7 @@
                 </div>
                 <div class="dash-right">
                     <a href="./login.html" class="dash-link logout" >Logout</a>
-                    <a href="#" class="dash-link">Go the main website</a>
+                    <a href="#" class="dash-link">Go to the main website</a>
                     <a href="./login.html" style="display: none;" class="go-to-login"></a>
                 </div>
             </header>
@@ -45,46 +44,7 @@
                 </div>
                 <div class="all-listing">
                   <div class="list-car2 listings-wrapper">
-                    <!-- <div class="list-car four">
-                      <div class="list-img">
-                          <img src="../images/Rectangle 61.png" alt="" class="img-list">
-                      </div>
-                      <div class="car-content">
-                          <div class="use">
-                              <p class="use">USED</p>
-                              <img src="../images/Group 170.png" alt="" class="use-option using4">
-                          </div>
-                          <h6 class="type">2016 Ford Mustang V6</h6>
-                          <div class="delete2 edit4">
-                              <a href="../html/adddetail.html" class="edit">
-                                  <img src="../images/edit (1) 1.png" alt="" class="edit-img">
-                                  <p class="edit-desc">Edit listing</p>
-                              </a>
-                              <div class="delete">
-                                  <img src="../images/Group 20.png" alt="" class="delete-img">
-                                  <p class="delete-desc btn-m4">Delete Listing</p>
-                              </div>
-                          </div>
-                          
-                          <div class="pricing">
-                              <img src="../images/Group 162 1.png" alt="" class="price-img">
-                              <h3 class="price">128,015,000</h3>
-                          </div>
-                          <div class="info">
-                              <div class="km">
-                                  <img src="../images/loc.png" alt="" class="km-img">
-                                  <p class="info-one">19,800 km</p>
-                              </div>
-                              <div class="loc">
-                                  <img src="../images/Group.png" alt="" class="loc-img">
-                                  <p class="info-one">Lagos</p>
-                              </div>
-                              <div class="more-detail">
-                                  <p class="see-more">See more details</p>
-                              </div>
-                          </div>
-                      </div>
-                    </div> -->
+                    
                   </div>
                 </div>
                 <div class="list-btn" style="display: none;">
@@ -128,17 +88,15 @@
             };
 
             const setPreviewItemId = (id) => {
-                const idToString = String(id);
-                console.log(idToString);
-                localStorage.setItem("previewItemId", idToString);
+                localStorage.setItem("previewItemId", id);
             }
 
             const showListings = () => {
                 const listings_display = listings.map(item => (`
                 <div key=${item.id} class="list-car four">
-                    <a href="./preview.html" class="link-cover" onclick="setPreviewItemId(${item.id})"></a>
+                    <a href="./preview.html" class="link-cover" onclick="setPreviewItemId('${item.id}')"></a>
                     <div class="list-img">
-                        <img src=${API_HOST + item.mainImage.url} alt="" class="img-list">
+                        <img src="${API_HOST}${item.mainImage.url}" alt="" class="img-list">
                     </div>
                     <div class="car-content">
                         <div class="use">

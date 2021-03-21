@@ -20,7 +20,7 @@
                         <img src="../images/gas 1.png" alt="" class="gastab-logo">
                     </div>
                 </div>
-                <div class="dash-right"><a href="#" class="dash-link">Go the main website</a></div>
+                <div class="dash-right"><a href="#" class="dash-link">Go to the main website</a></div>
             </header>
             <section class="steps first">
               <div class="header-link come">
@@ -222,14 +222,18 @@
           let previewItem;
 
           if (localStorage.getItem("vehiclesList") && localStorage.getItem("previewItemId")) {
-              vehicles = JSON.parse(localStorage.getItem("vehiclesList"));
-              previewItemId = localStorage.getItem("previewItemId");
-              previewItemId__num = Number(previewItemId);
-              if (previewItemId__num != 0) {
-                  index = previewItemId__num - 1;
-              }
+            vehicles = JSON.parse(localStorage.getItem("vehiclesList"));
+            previewItemId = localStorage.getItem("previewItemId");
+            if (previewItemId__num != 0) {
+                index = previewItemId__num - 1;
+            }
 
-              previewItem = vehicles[index];
+            for (let i = 0; i < vehicles.length; i++) {
+                if (vehicles[i].id.toString() === previewItemId.toString()) {
+                    previewItem = vehicles[i];
+                    break;
+                }
+            }
           }
 
           if (previewItem) {
