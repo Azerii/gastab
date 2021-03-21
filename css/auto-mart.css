@@ -11,13 +11,16 @@
   padding: 3% 5%;
 }
 
+.card> a {
+  height: 258px;
+}
 
 .card> a >img {
-  height: 258px;
 width: 100%;
 }
 .card-btm img{
-  height: 10px;
+  height: 16px;
+  margin-right: 8px;
 }
 .card-btm{
   padding: 1rem 0;
@@ -25,9 +28,34 @@ width: 100%;
 .card-btm>* + *{
   margin-top: 15px;
 }
+.card-btm .car-model {
+  font-size: 18px;
+  font-weight: 400;
+}
+.card-btm .car-price {
+  font-size: 24px;
+  font-weight: 700;
+}
+.card-btm .go-to-preview {
+  color: #EC1D23;
+}
 .auto1-ft{
   display: flex;
   justify-content: space-between;
+}
+.card-btm .bottom-info {
+  margin-top: 2rem;
+}
+.card-btm .bottom-info .metrics {
+  display: flex;
+  align-items: center;
+}
+.card-btm .bottom-info .metrics .p-xmini {
+  display: flex;
+  align-items: center;
+}
+.card-btm .car-location {
+  margin-left: 2rem;
 }
 .card-ctn{
   display: grid;
@@ -62,9 +90,9 @@ margin-left: 1rem;
   .card-ctn {
     grid-template-columns: minmax(100px, 1fr);
   }
-  .item-ctr {
-    /* display: none; */
-  }
+  /* .item-ctr {
+    display: none;
+  } */
   .auto1-sec2-a{
     padding: 3% 0 5% 0;
   }

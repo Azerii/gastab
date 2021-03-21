@@ -20,7 +20,7 @@
 
 .auto2-sec1-a>img {
   display: block;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -47,6 +47,7 @@
 .sm-img {
   display: grid;
   grid-auto-flow: column;
+  align-items: center;
   grid-auto-columns: minmax(72px, 1fr);
   width: 100%;
   grid-gap: 15px;
@@ -61,10 +62,11 @@
   height: 24px;
   width: 14px;
   left: -3rem;
-  bottom: 12.1rem;
+  bottom: 3.5rem;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
+  cursor: pointer;
 }
 
 .right-arrow {
@@ -73,15 +75,15 @@
   height: 24px;
    width: 14px;
   right: -3rem;
- bottom: 12.1rem;
+  bottom: 3.5rem;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
+  cursor: pointer;
 }
 
 .auto2-sec1-b>p {
   display: flex;
-  justify-content: space-between;
   line-height: 18px;
 }
 
@@ -103,13 +105,22 @@
 }
 
 .ct-modal {
+  display: flex;
   height: 100vh;
   width: 100%;
   position: fixed;
   top: 0;
   background-color: var(--fade);
   z-index: 2;
-  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  overflow: auto;
+  transition: opacity 100ms ease-in;
+}
+
+.ct-modal.open {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .thanks {
@@ -188,6 +199,7 @@
   font-size: 21px;
   color: #696969;
   margin-bottom: 17px;
+  text-transform: uppercase;
 }
 
 .brand {
@@ -207,26 +219,33 @@
  margin-left: 97.18px;
 }
 .spd-lct> span >img{
-  height: 12px;
-  width: 10.71px;
+  height: 16px;
   display: inline-block;
   margin-right: 10px;
 }
 .desc{
   color: #696969;
+  margin-top: 3rem;
 }
 .lux{
-      line-height: 1.5 !important;
-      font-size: 16px;
+  line-height: 1.5 !important;
+  font-size: 16px;
+}
+.auto2-sec1-b .basics {
+  color: #696969;
+  margin-top: 2rem;
 }
 
 .price {
   font-size: 24px;
   font-weight: 700;
-   margin-bottom: 43.76px;
 }
 
-.autO2-a {
+/* .autO2-a {
+} */
+
+.auto2-sec1-b .btn {
+  display: inline-block;
 }
 
 .autO2-b {
@@ -248,7 +267,6 @@
   }
 
   .auto2-sec1-b {
-    margin-top: 5rem;
     width: 50%;
   }
 }

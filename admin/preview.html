@@ -6,20 +6,20 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
-        <link rel="stylesheet" href="../css/index.css">
-        <link rel="stylesheet" href="../css/dashboard.css" type="text/css">
-        <link rel="stylesheet" href="../css/preview.css">
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="./css/dashboard.css" type="text/css">
+        <link rel="stylesheet" href="./css/preview.css">
     </head>
     <body>
         <main class="container">
             <header class="header">
                 <div class="head">
                     <div class="logo">
-                        <img src="../images/gas 1.png" alt="" class="gastab-logo">
+                        <img src="./images/gas 1.png" alt="" class="gastab-logo">
                     </div>
                 </div>
                 <div class="dash-right">
-                    <a href="#" class="dash-link">Go to the main website</a>
+                    <a href="../home.html" class="dash-link">Go to the main website</a>
                     <a href="./login.html" style="display: none;" class="go-to-login"></a>
                 </div>
             </header>
@@ -27,23 +27,23 @@
                 <div class="card">
                     <div class="car">
                         <div class="car-img">
-                            <img src="../images/Rectangle 66.png" alt="" class="img-car mainImage__preview">
+                            <img src="./images/Rectangle 66.png" alt="" class="img-car mainImage__preview">
                         </div>
                         <div class="car-content">
                             <p class="use condition__preview">USED</p>
                             <h6 class="type"><span class="year__preview">2016</span> <span class="model__preview">Ford Mustang V6</span></h6>
                             <div class="info">
                                 <div class="km">
-                                    <img src="../images/loc.png" alt="" class="km-img">
+                                    <img src="./images/loc.png" alt="" class="km-img">
                                     <p class="info-one"><span class="mileage__preview"></span>&nbsp;km</p>
                                 </div>
                                 <div class="loc">
-                                    <img src="../images/Group.png" alt="" class="loc-img">
+                                    <img src="./images/Group.png" alt="" class="loc-img">
                                     <p class="info-one location__preview">Lagos</p>
                                 </div>
                             </div>
                             <div class="pricing">
-                                <img src="../images/Group 162 1.png" alt="" class="price-img">
+                                <img src="./images/Group 162 1.png" alt="" class="price-img">
                                 <h3 class="price price__preview">128,015,000</h3>
                             </div>
                             <p class="info-title">Description</p>
@@ -127,7 +127,7 @@
             </div>
         </main>
         <!-- <script src="../js/slide.js" async defer></script> -->
-        <script src="../utils/api/deleteEntry.js" text="text/javascript"></script>
+        <script src="./utils/api/deleteEntry.js" text="text/javascript"></script>
         <script>
             if (!localStorage.getItem("gastab_admin:root")) {
                 document.querySelector('.go-to-login').click();
@@ -135,16 +135,11 @@
             // preview details
             let vehicles;
             let previewItemId;
-            let previewItemId__num;
-            let index;
             let previewItem;
 
             if (localStorage.getItem("vehiclesList") && localStorage.getItem("previewItemId")) {
                 vehicles = JSON.parse(localStorage.getItem("vehiclesList"));
                 previewItemId = localStorage.getItem("previewItemId");
-                if (previewItemId__num != 0) {
-                    index = previewItemId__num - 1;
-                }
 
                 for (let i = 0; i < vehicles.length; i++) {
                     if (vehicles[i].id.toString() === previewItemId.toString()) {

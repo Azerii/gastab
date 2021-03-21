@@ -88,8 +88,10 @@ a {
 }
 
 .p-xmini {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 400;
+  color: #696969;
+  text-transform: uppercase;
 }
 
 nav {
@@ -267,14 +269,19 @@ nav {
   bottom: 0;
 }
 
-
+.flex-row {
+  display: flex !important;
+  flex-direction: row;
+  align-items: center;
+}
 
 
 
 .ly-sec1>h1,
 .ly-sec1>p,
 .ly-sec1>h4,
-.ly-sec1>button {
+.ly-sec1>button,
+.ly-sec1>a {
   position: relative;
   color: white;
   z-index: 1;
@@ -336,7 +343,7 @@ nav {
   background-color: var(--red);
   color: white;
   border: unset;
-  width: 18%;
+  width: 15rem;
   margin: auto;
   outline: none;
   cursor: pointer;
@@ -358,6 +365,12 @@ nav {
 
 .ly-sec3 .btn {
   margin-left: 0;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -391,6 +404,11 @@ nav {
 
 
 @media (max-width:1024px) {
+  .flex-column-mb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 #navMobile{
   display: flex;
 }
@@ -417,12 +435,14 @@ nav {
     display: block;
     position: absolute;
     right: 2rem;
-    top: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 24px;
   }
 
   nav {
     display: flex;
-    height: 50px;
+    padding: 1rem 0;
     align-items: center;
     position: sticky;
     top: 0;
@@ -452,9 +472,7 @@ nav {
   }
 
   nav>a>img {
-    height: 80%;
-    display: block;
-    margin: auto 0;
+    height: 48px;
   }
 /* 
   .ft-top-lf>form {
@@ -473,6 +491,7 @@ nav {
     white-space: nowrap;
     width: 100%;
     border: none;
+    font-size: 24px;
   }
 
   .navitems>:last-child {

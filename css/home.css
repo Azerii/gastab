@@ -94,7 +94,6 @@
 
 .hm-gallery>img {
   width: 100%;
-  height: 100%;
 }
 
 .hm-gallery>:nth-child(1) {
@@ -114,9 +113,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: unset;
-    grid-auto-rows: 364px;
     height: auto;
-    grid-gap: 64px;
 
   }
 
@@ -124,7 +121,6 @@
   .hm-gallery> :nth-child(2),
   .hm-gallery> :nth-child(3) {
     grid-area: unset;
-    height: 364px;
   }
 
   .hm-sec2-a {
@@ -146,7 +142,8 @@
     text-align: left;
   }
   .hm-gallery {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
   .hm-logos {
     display: none;
@@ -203,4 +200,4 @@
     margin-left: 1rem;
   }
 
-  
+}

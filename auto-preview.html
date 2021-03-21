@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/auto-mart2.css">
+  <link rel="stylesheet" href="./css/auto-preview.css">
   <title></title>
 </head>
 
@@ -15,7 +15,7 @@
    <div class="navitems dsk">
      <a href="./home.html">Home</a>
      <a href="./about.html">About Us</a>
-     <a href="./product.html">Product & Services</a>
+     <a href="./products.html">Product & Services</a>
      <a href="./shop.html">Shop</a>
      <a href="./contact.html">Contact Us</a>
    </div>
@@ -29,7 +29,7 @@
  <div id="navMobile" class="navitems">
    <a href="./home.html">Home</a>
    <a href="./about.html">About Us</a>
-   <a href="./product.html">Product & Services</a>
+   <a href="./products.html">Product & Services</a>
    <a href="./shop.html">Shop</a>
    <a href="./contact.html">Contact Us</a>
  </div>
@@ -52,7 +52,7 @@
       <button class="btn">Submit</button>
     </div>
   </div>
-  <div class="ct-modal "">
+  <div class="ct-modal">
     <div style="width: 447.11px;height: 208.93px;" class="thanks">
       <img src="./images/close.svg" alt="close" class="close closeModalBtn">
      <p style="font-size: 14;line-height: 21px;">Call or whatsapp this number if<br> want to order this truck</p>
@@ -68,7 +68,7 @@
 
 
     <div class="auto2-sec1-a carousel">
-      <img class="enlarge" src="./images/auto-truck.png" alt="images/auto-truck">
+      <img class="enlarge mainImage__preview" src="" alt="auto-truck">
 
       <div class="left-arrow"></div>
       <div class="right-arrow"></div>
@@ -85,31 +85,29 @@
     <div class="auto2-sec1-b">
      <div class="autO2">
        <div class="autO2-a">
-         <span class="isUsed">USED</span>
-         <span class="brand">2016 Ford Mustang V6</span>
-         <p class="spd-lct">
-           <span><img src="./images/meter-logo.svg" alt="meter"> 19,800 km</span>
-           <span><img src="./images/location-logo.svg" alt="location-logo"> Lagos</span>
+         <span class="isUsed condition__preview">USED</span>
+         <span class="flex-row">
+          <span class="brand year__preview">2016</span>
+          <span class="brand model__preview">Ford Mustang V6</span>
+         </span>
+          <p class="spd-lct">
+           <span class="flex-row"><img src="./images/meter-logo.svg" alt="meter">&nbsp;<span class="mileage__preview">19,800</span>&nbsp;km</span>
+           <span class="flex-row"><img src="./images/location-logo.svg" alt="location-logo">&nbsp;<span class="location__preview">Lagos</span>
           </p>
-          <span class="price">₦ 128,015,000 </span>
+          <span class="price flex-row">₦&nbsp;<span class="price price__preview">128,015,000</span></span>
        </div>
-       <div class="autO2-b">
-         <span class="desc"><img src="./images/views.svg" alt=""> 250 views</span>
+       <div class="autO2-b" style="display: none;">
+         <span class="desc"><img src="./images/views.svg" alt="">&nbsp;&nbsp;250 views</span>
          <span><img src="./images/auto1-star.png"  alt=""> 4.8</span>
        </div>
      </div>
       <p class="desc">Description</p>
-      <p class="lux">LUXURY AUTO SELECTION OFFERS YOU: 2016 Ford Mustang<br class="brdsk">
-        EcoBoost Premium 2dr Convertible Shadow Black Exterior Over<br class="brdsk">
-        Black Leather Interior Serviced!! Loaded With Options!! Great<br class="brdsk">
-        Condition!! Included Optional Equipment: Navigation System<br class="brdsk">
-        ( $795.00 )Heated Seats AC Seats Power Passenger Seat Power.<br class="brdsk">
-      </p>
-      <p>Basics</p>
-      <p>Truck condition: Nigeria used</p>
-      <p>State of the truck: Unpainted, Need body repair</p>
-      <p>Transmission: Automatic</p>
-      <p>Truck color: Red</p>
+      <p class="lux description__preview"></p>
+      <p class="basics">Basics</p>
+      <p>Truck condition:&nbsp;&nbsp;<span class="condition2__preview"></span></p>
+      <p>State of the truck:&nbsp;&nbsp;<span class="currentState__preview"></span></p>
+      <p>Transmission:&nbsp;&nbsp;<span class="transmission__preview"></span></p>
+      <p>Truck color:&nbsp;&nbsp;<span class="color__preview"></span></p>
       <button class="btn wht">Submit review</button>
       <button class="btn">Order now</button>
 
@@ -128,7 +126,7 @@
         <div class="ft-top-rt-a">
           <a href="./home.html">Home</a>
           <a href="./about.html">About us</a>
-          <a href="./product.html">Products & Services</a>
+          <a href="./products.html">Products & Services</a>
           <a href="./shop.html">Shop</a>
         </div>
         <div class="ft-top-rt-b">
@@ -140,7 +138,7 @@
     <span class="copyright">copyright &copy; 2021 All rights reserved</span>
   </div>
   <script src="./js/index.js"></script>
-  <script src="./js/auto-mart2.js"></script>
+  <script src="./js/auto-preview.js"></script>
 </body>
 
 </html>

@@ -1,3 +1,5 @@
+naira = ₦
+
 const preventDefaults = (e) => {
   e.preventDefault();
   e.stopPropagation();
@@ -133,3 +135,83 @@ function hiddenItems() {
                           </div>
                       </div>
                     </div>
+
+let list_items = [{
+    isNew: false,
+    brand: '2016 Ford Mustang V6',
+    price: '₦128,015,000',
+    speed: '19,800',
+    location: 'Lagos'
+  },
+  {
+    isNew: false,
+    brand: '2016 Ford Mustang V6',
+    price: '₦128,015,000',
+    speed: '19,800',
+    location: 'Lagos'
+  },
+  {
+    isNew: false,
+    brand: '2016 Ford Mustang V6',
+    price: '₦128,015,000',
+    speed: '19,800',
+    location: 'Lagos'
+  },
+  {
+    isNew: false,
+    brand: '2016 Ford Mustang V6',
+    price: '₦128,015,000',
+    speed: '19,800',
+    location: 'Lagos'
+  },
+  {
+    isNew: false,
+    brand: '2016 Ford Mustang V6',
+    price: '₦128,015,000',
+    speed: '19,800',
+    location: 'Lagos'
+  },
+  {
+    isNew: false,
+    brand: '2016 Ford Mustang V6',
+    price: '₦128,015,000',
+    speed: '19,800',
+    location: 'Lagos'
+  },
+  {
+    isNew: false,
+    brand: '2016 Ford Mustang V6',
+    price: '₦128,015,000',
+    speed: '19,800',
+    location: 'Lagos'
+  },
+  {
+    isNew: false,
+    brand: '2016 Ford Mustang V6',
+    price: '₦128,015,000',
+    speed: '19,800',
+    location: 'Lagos'
+  },
+  {
+    isNew: false,
+    brand: '2016 Ford Mustang V6',
+    price: '₦128,015,000',
+    speed: '19,800',
+    location: 'Lagos'
+  },
+  {
+    isNew: false,
+    brand: '2016 Ford Mustang V6',
+    price: '₦128,015,000',
+    speed: '19,800',
+    location: 'Lagos'
+  },
+  {
+    isNew: false,
+    brand: '2016 Ford Mustang V6',
+    price: '₦128,015,000',
+    speed: '19,800',
+    location: 'Lagos'
+  },
+
+];
