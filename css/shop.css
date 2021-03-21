@@ -1,0 +1,19 @@
+.sh-sec1 {
+  margin-bottom: 6%;
+}
+
+.sh-mb {
+  display: none
+}
+@media (max-width:768px){
+  .sh-mb{
+    display: block;
+  }
+  .sh-dsk{
+    display: none;
+  }
+  .sh-sec1 .btn{
+    width: 10rem;
+    height: 4rem;
+  }
+}

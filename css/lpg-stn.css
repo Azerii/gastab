@@ -1,0 +1,25 @@
+.lpg-sec2 {
+  height: fit-content;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.lpg-sec2-a {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+}
+
+@media (max-width:1150px) {
+  .lpg-sec2-a>p {
+    font-size: 18px;
+  }
+}
+@media (max-width:1024px) {
+ .lpg-sec2-a {
+   padding-top: 3rem;
+   padding-bottom: 3rem;
+   padding: 5%;
+   width: fit-content;
+ }
+}
