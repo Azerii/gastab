@@ -90,7 +90,7 @@ function DisplayList(items, wrapper, rows_per_page, page) {
               <span class="p-xmini car-mileage"><img src="./images/meter-logo.svg" alt="meter"> ${formatNumber(item.mileage)}</span> 
               <span class="p-xmini car-location"><img src="./images/location-logo.svg" alt="location-logo"> ${item.location}</span>
             </span>
-            <a href="./auto-preview.html" class="p-xmini go-to-preview">See more details</a>
+            <a href="./auto-preview.html" class="p-xmini go-to-preview" onclick="setPreviewItemId('${item.id}')">See more details</a>
           </p>
         </div>
       </div>

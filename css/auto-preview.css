@@ -9,19 +9,23 @@
 
 }
 
-.auto2-sec1-a {
+/* .auto2-sec1-a {
   height: 564px;
 
-}
+} */
 
 .auto2-sec1-a {
   position: relative;
 }
 
-.auto2-sec1-a>img {
-  display: block;
+.auto2-sec1-a> .main-img-wrapper {
   width: 100%;
-  margin: 0 auto;
+  height: 375px;
+  overflow: hidden;
+}
+
+.auto2-sec1-a> .main-img-wrapper img {
+  width: 100%;
 }
 
 .auto2-sec1-b>p+p {

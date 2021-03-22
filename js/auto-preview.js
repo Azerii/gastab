@@ -218,7 +218,7 @@ const showPreview = () => {
       mainImage__preview.src = `${API_HOST}${previewUrl}`;
   }
 
-  if (previewItem && previewItem.moreImages) {
+  if (previewItem && previewItem.moreImages.length) {
     carousel.querySelector('.sm-img').innerHTML = `
       ${
         previewItem.moreImages.map(
@@ -229,12 +229,13 @@ const showPreview = () => {
             src="${API_HOST}${image.url}" alt="image slide"/>
             `
           }
-          ).join('')
-        }
-      
-  `
+        ).join('')
+      }
+    `
   } else {
-    carousel.querySelector('.sm-img').innerHTML = `<p>-- --</p>`
+    leftArrow.remove();
+    rightArrow.remove();
+    document.querySelector('.sm-img').innerHTML = `<p>-- --</p>`
   }
 
   // set preview details
@@ -252,7 +253,9 @@ const showPreview = () => {
       color__preview.innerText = previewItem.color;
   }
 
-  width = document.querySelector('.sm-img img').width
+  if (document.querySelector('.sm-img img')) {
+    width = document.querySelector('.sm-img img').width
+  }
 };
 
 showPreview();

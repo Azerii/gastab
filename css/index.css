@@ -142,7 +142,7 @@ nav {
 .footer {
   padding: 77px 91px 65px;
   background-color: var(--purple);
-  height: 520px;
+  /* height: 520px; */
 }
 
 .footer * {

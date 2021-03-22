@@ -12,7 +12,9 @@
 }
 
 .card> a {
+  display: block;
   height: 258px;
+  overflow: hidden;
 }
 
 .card> a >img {
@@ -63,7 +65,7 @@ width: 100%;
   /* grid-auto-rows: ; */
   margin: 3%; 
   justify-items: center;
-  grid-gap: 2rem;
+  grid-gap: 4rem;
   
 }
 .auto1-h4{
