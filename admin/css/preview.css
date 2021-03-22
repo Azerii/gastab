@@ -173,6 +173,7 @@ img.img-car {
   display: flex;
   justify-content: flex-end;
   background-color: #ffffff;
+  padding: 0 8rem;
 }
 .edit-link {
   font-size: 1.8rem;

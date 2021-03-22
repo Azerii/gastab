@@ -82,7 +82,7 @@
 
 .hm-gallery {
   display: grid;
-  height: 611px;
+  /* height: 611px; */
   grid-template-areas:
     ' a b'
     '  a c'

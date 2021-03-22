@@ -164,6 +164,10 @@ html {
 /* .list-car:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 } */
+.list-img {
+  height: 18rem;
+  overflow: hidden;
+}
 .list-img img {
   width: 100%;
 }
