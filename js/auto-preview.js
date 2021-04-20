@@ -180,12 +180,12 @@ btns[0].addEventListener('click',
     // ctModal[0].classList.add('open');
   }
 )
-btns[1].addEventListener('click',
-  (event) => {
-    event.preventDefault()
-    ctModal[1].classList.add('open');
-  }
-)
+// btns[1].addEventListener('click',
+//   (event) => {
+//     event.preventDefault()
+//     ctModal[1].classList.add('open');
+//   }
+// )
 
 const showPreview = () => {
 

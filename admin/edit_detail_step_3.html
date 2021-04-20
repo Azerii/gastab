@@ -20,7 +20,9 @@
                         <img src="./images/gas 1.png" alt="" class="gastab-logo">
                     </div>
                 </div>
-                <div class="dash-right"><a href="#" class="dash-link">Go to the main website</a></div>
+                <div class="dash-right">
+                  <a href="../home.html" target="_blank" rel="noreferrer noopener" class="dash-link">Go to the main website</a>
+                </div>
             </header>
             <section class="steps first">
               <div class="header-link come">
@@ -486,7 +488,11 @@
 
             description = document.querySelector('#description').value;
             
-            showPreview();
+            if(mainImageArr[0] || mainImageArr_server[0]) {
+              showPreview();
+            } else {
+              alert("You must upload at least the main image!")
+            }
           };
 
           const handleEditCLick = () => {
