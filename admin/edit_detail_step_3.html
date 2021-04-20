@@ -77,6 +77,15 @@
                               <input type="file" name="mainImage" class="drop-zone__input" accept="image/*" onchange="loadFile(event)">
                           </div>
                           <p class="upload-size">max. File size: 5 MB</p>
+                          <div class="files main-image server">
+                            <!-- <div class="file1">
+                                <p class="file-title">IMG-40677.JPG</p>
+                                <div class="file-size">
+                                    <p class="file-desc">2.0mb</p>
+                                    <img src="./images/cancel.svg" alt="" class="cancel-file">
+                                </div>
+                            </div> -->
+                          </div>
                           <div class="files main-image">
                             <!-- <div class="file1">
                                 <p class="file-title">IMG-40677.JPG</p>
@@ -85,7 +94,7 @@
                                     <img src="./images/cancel.svg" alt="" class="cancel-file">
                                 </div>
                             </div> -->
-                        </div>
+                          </div>
                       </div>
                   </div>
                   <div class="truck">
@@ -97,6 +106,15 @@
                               <input type="file" name="otherImages" class="drop-zone__input" accept="image/*" multiple onchange="loadFile(event)">
                           </div>
                           <p class="upload-size">max. File size: 5 MB</p>
+                          <div class="files other-images server">
+                            <!-- <div class="file1">
+                                <p class="file-title">IMG-40677.JPG</p>
+                                <div class="file-size">
+                                    <p class="file-desc">2.0mb</p>
+                                    <img src="./images/cancel.svg" alt="" class="cancel-file">
+                                </div>
+                            </div>-->
+                          </div>
                           <div class="files other-images">
                             <!-- <div class="file1">
                                 <p class="file-title">IMG-40677.JPG</p>
@@ -105,7 +123,7 @@
                                     <img src="./images/cancel.svg" alt="" class="cancel-file">
                                 </div>
                             </div>-->
-                        </div>
+                          </div>
                       </div>
                   </div>
                   <div class="truck">
@@ -220,6 +238,11 @@
           let previewItemId__num;
           let index;
           let previewItem;
+          let mainImageArr_server;
+          let otherImagesArr_server;
+
+          const filesWrapper_main_server = document.querySelector('.files.main-image.server');
+          const filesWrapper_others_server = document.querySelector('.files.other-images.server');
 
           if (localStorage.getItem("vehiclesList") && localStorage.getItem("previewItemId")) {
             vehicles = JSON.parse(localStorage.getItem("vehiclesList"));
@@ -236,7 +259,90 @@
             }
           }
 
+          function formatBytes(bytes, decimals = 1) {
+            if (bytes === 0) return '0 Bytes';
+
+            const k = 1024;
+            const dm = decimals < 0 ? 0 : decimals;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
+
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+          }
+
+          function updateFileDisplay_server(index, initiator){
+            if (initiator === 'mainImage') {
+                mainImageArr_server.splice(index, 1);
+                showMainFile_server();
+            } else {
+                otherImagesArr_server.splice(index, 1);
+                showOtherFiles_server();
+            }
+          }
+
+          function updateFileDisplay(index, initiator){
+            if (initiator === 'mainImage') {
+                mainImageArr.splice(index, 1);
+                showMainFile();
+            } else {
+                otherImagesArr.splice(index, 1);
+                showOtherFiles();
+            }
+          }
+
+          const showMainFile_server = () => {
+            const f = mainImageArr_server[0];
+
+            if (f) {
+              const fileDisplay = `
+                <div class="file1">
+                    <p class="file-title">${f.name}</p>
+                    <div class="file-size">
+                        <p class="file-desc">${f.size}mb</p>
+                        <img src="./images/cancel.svg" alt="" class="cancel-file" onclick="updateFileDisplay_server(0, 'mainImage')">
+                    </div>
+                </div>
+              `;
+              filesWrapper_main_server.innerHTML = fileDisplay;
+            } else {
+              filesWrapper_main_server.innerHTML = `<div></div>`;
+            }
+          };
+
+          const showOtherFiles_server = () => {
+            const files = otherImagesArr_server;
+
+            if (files.length) {
+
+              const fileDisplay = files.map((file, index) => `
+                <div class="file1">
+                    <p class="file-title">${file.name}</p>
+                    <div class="file-size">
+                        <p class="file-desc">${file.size}mb</p>
+                        <img src="./images/cancel.svg" alt="" class="cancel-file" onclick="updateFileDisplay_server(${index}, null)">
+                    </div>
+                </div>
+              `);
+
+              filesWrapper_others_server.innerHTML = fileDisplay.join("");
+            } else {
+              filesWrapper_others_server.innerHTML = `<div></div>`;
+            }
+          };
+
           if (previewItem) {
+
+            if (previewItem.mainImage) {
+              mainImageArr_server = [previewItem.mainImage];
+              showMainFile_server();
+            }
+
+            if (previewItem.moreImages.length) {
+              otherImagesArr_server = previewItem.moreImages;
+              showOtherFiles_server();
+            }
+
             document.querySelector('textarea[name="description"]').value = previewItem.description;
           }
           
@@ -253,6 +359,7 @@
           const previewModal = document.querySelector('.preview-modal')
           const mainImageArr = [];
           const otherImagesArr = [];
+          
           let description;
 
 
@@ -266,19 +373,6 @@
             return formatter.format(toNum);
           };
 
-
-          function formatBytes(bytes, decimals = 1) {
-            if (bytes === 0) return '0 Bytes';
-
-            const k = 1024;
-            const dm = decimals < 0 ? 0 : decimals;
-            const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'];
-
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
-          }
-
           const showMainFile = () => {
             const f = mainImageArr[0];
 
@@ -288,7 +382,7 @@
                     <p class="file-title">${f.name}</p>
                     <div class="file-size">
                         <p class="file-desc">${formatBytes(f.size)}</p>
-                        <img src="./images/cancel.svg" alt="" class="cancel-file">
+                        <img src="./images/cancel.svg" alt="" class="cancel-file" onclick="updateFileDisplay(0, 'mainImage')">
                     </div>
                 </div>
               `;
@@ -306,7 +400,7 @@
                     <p class="file-title">${file.name}</p>
                     <div class="file-size">
                         <p class="file-desc">${formatBytes(file.size)}</p>
-                        <img src="./images/cancel.svg" alt="" class="cancel-file">
+                        <img src="./images/cancel.svg" alt="" class="cancel-file" onclick="updateFileDisplay(${index}, null)">
                     </div>
                 </div>
               `);
@@ -422,6 +516,14 @@
               uploads.append(`files.mainImage`, file, file.name);
             } else {
               data.mainImage = previewItem.mainImage;
+            }
+
+            if (otherImagesArr.length) {
+              for (let i = 0; i < otherImagesArr.length; i++) {
+                let file = otherImagesArr[i];
+                uploads.append('files.moreImages', file, file.name);
+              }
+              data.moreImages = otherImagesArr_server
             }
 
             uploads.append('data', JSON.stringify(data));
