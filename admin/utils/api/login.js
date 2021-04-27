@@ -1,4 +1,4 @@
-const API_HOST = 'https://gastab-server.herokuapp.com';
+const API_HOST = 'https://gastab-api.herokuapp.com';
 
 const loginUser = async (cred) => {
   const options = {

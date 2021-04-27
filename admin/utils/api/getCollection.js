@@ -1,4 +1,4 @@
-const API_HOST = 'https://gastab-server.herokuapp.com';
+const API_HOST = 'https://gastab-api.herokuapp.com';
 
 const getCollection = async (collectionType, id) => {
   // const token = getToken();

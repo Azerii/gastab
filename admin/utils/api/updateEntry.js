@@ -1,4 +1,4 @@
-const API_HOST = 'https://gastab-server.herokuapp.com';
+const API_HOST = 'https://gastab-api.herokuapp.com';
 const goToNext = document.querySelector('.go-to-next');
 
 const updateEntry = async (collectionType, data, id) => {
